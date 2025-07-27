@@ -1,0 +1,36 @@
+# Ignore Python virtual environment directories
+test/
+# (This will ignore your virtual environment and all its subfolders)
+
+# Ignore Python bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore environment and secret configuration files
+.env
+pg_pass.txt
+bubbly-subject-458714-b1-1639221eb432.json
+# (These files may contain sensitive credentials or API keys)
+
+# Ignore Docker Compose and related local config files
+compose.yaml
+
+# Ignore requirements file if you don't want to share dependencies
+# requirements.txt
+
+# Ignore files with ambiguous or unwanted names
+fr ?.py
+huh.py
+
+# Ignore OS-specific files
+.DS_Store
+
+# Ignore Git ignore file itself (uncomment if you want to keep it private)
+# .gitignore
+
+# Ignore any other log or temp files
+*.log
+*.tmp
+
+# End of .gitignore
