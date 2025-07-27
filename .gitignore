@@ -8,7 +8,7 @@ __pycache__/
 *.pyo
 
 # Ignore environment and secret configuration files
-.env
+*.env
 pg_pass.txt
 bubbly-subject-458714-b1-1639221eb432.json
 # (These files may contain sensitive credentials or API keys)
