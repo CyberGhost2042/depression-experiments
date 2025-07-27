@@ -1,0 +1,29 @@
+# Ignore Python virtual environment and dependencies
+# (Not needed in Docker image, will be installed fresh)
+test/
+
+# Ignore sensitive and secret files
+.env
+pg_pass.txt
+bubbly-subject-458714-b1-1639221eb432.json
+
+# Ignore Docker Compose and local config files
+compose.yaml
+
+# Ignore files with ambiguous or unwanted names
+fr ?.py
+huh.py
+
+# Ignore OS-specific files
+.DS_Store
+
+# Ignore Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore log and temp files
+*.log
+*.tmp
+
+# End of .dockerignore 
