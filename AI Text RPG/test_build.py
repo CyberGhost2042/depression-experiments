@@ -1,14 +1,16 @@
 import os
 from dotenv import load_dotenv
-from langchain_google_vertexai import VertexAI
-import langsmith as ls
+from langchain_google_vertexai import ChatVertexAI
+
+# import langsmith as ls
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.prompts import (
     ChatPromptTemplate,
     MessagesPlaceholder,
 )
 from langchain_core.messages import BaseMessage
-from langchain_postgres import PGVector
+
+# from langchain_postgres import PGVector
 from langchain_core.runnables import RunnableWithMessageHistory
 from pydantic import BaseModel, Field
 
@@ -25,7 +27,7 @@ os.environ["LANGSMITH_PROJECT"] = "eli-5"
 os.environ["LANGSMITH_API_KEY"] = os.environ.get("LANGSMITH_API_KEY")
 
 
-llm = VertexAI(model_name="gemini-2.0-flash")
+llm = ChatVertexAI(model_name="gemini-2.0-flash")
 
 prompt_str = """You are an AI storyteller creating an interactive text-based RPG experience. Your goal is to generate engaging, random short stories that immerse the user as the main character, then progress the narrative based on their inputs while staying true to the established setting, plot, and logic.
 Core Rules:
